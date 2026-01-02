@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities | Anyarat Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --pink-accent: #ff85a2;
+            --dark-bg: #0a0a0a;
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--dark-bg); 
+            color: #ffffff; 
+            overflow-x: hidden; 
+        }
+
+        .serif { font-family: 'Playfair Display', serif; }
+        .text-pink { color: var(--pink-accent) !important; }
+
+        /* Navbar */
+        .navbar { background: rgba(10, 10, 10, 0.95) !important; border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important; }
+        .nav-link { color: #fff !important; font-size: 11px; letter-spacing: 0.2em; font-weight: 300; }
+        .nav-link.active { color: var(--pink-accent) !important; font-weight: 600; }
+
+        /* Header Section */
+        .header-title { font-size: clamp(2.5rem, 6vw, 4.5rem); letter-spacing: -0.02em; }
+        .line-accent { width: 60px; height: 1px; background: var(--pink-accent); margin: 20px auto; }
+
+        /* Swiper Landscape Style */
+        .activity-section { padding: 80px 0; }
+        .swiper { width: 100%; padding-top: 50px; padding-bottom: 100px; }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            /* ปรับเป็นขนาดแนวนอน */
+            width: 600px; 
+            height: 400px; 
+            filter: grayscale(100%);
+            transition: 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+            opacity: 0.2;
+        }
+
+        .swiper-slide-active {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.05); /* ขยายเล็กน้อยให้ดูหรู */
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0;
+            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Swiper Controls */
+        .swiper-pagination-bullet { background: #fff !important; opacity: 0.2; }
+        .swiper-pagination-bullet-active { background: var(--pink-accent) !important; opacity: 1; }
+        .swiper-button-next, .swiper-button-prev { color: var(--pink-accent) !important; transform: scale(0.6); opacity: 0.5; }
+        .swiper-button-next:hover, .swiper-button-prev:hover { opacity: 1; }
+
+        /* Button */
+        .btn-outline-pink {
+            border: 1px solid var(--pink-accent);
+            color: var(--pink-accent);
+            padding: 12px 35px;
+            font-size: 11px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: 0.4s;
+        }
+        .btn-outline-pink:hover { background: var(--pink-accent); color: #000; }
+
+        @media (max-width: 992px) {
+            .swiper-slide { width: 80vw; height: 53vw; } /* ปรับตามขนาดหน้าจอแนวนอน */
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold serif text-pink" href="index.html" style="font-size: 14px; letter-spacing: 0.3em;">ANYARAT.PORT</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="index.html">HOME</a>
+                <a class="nav-link" href="about.html">ABOUT ME</a>
+                <a class="nav-link active" href="activities.html">ACTIVITIES</a>
+                <a class="nav-link" href="contact.html">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid activity-section mt-5">
+        <div class="text-center mb-2" data-aos="fade-up">
+            <h6 class="text-pink tracking-widest mb-3 small fw-bold uppercase">Archive</h6>
+            <h2 class="serif italic header-title">Visual Memories</h2>
+            <div class="line-accent"></div>
+        </div>
+
+        <div class="swiper myActivitySwiper" data-aos="zoom-in">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="p4.jpg" alt="Activity 1"></div>
+                <div class="swiper-slide"><img src="p3.jpg" alt="Activity 2"></div>
+                <div class="swiper-slide"><img src="p1.JPG" alt="Activity 3"></div>
+                <div class="swiper-slide"><img src="p11.jpg" alt="Activity 4"></div>
+                <div class="swiper-slide"><img src="p6.jpg" alt="Activity 5"></div>
+                <div class="swiper-slide"><img src="p7.jpg" alt="Activity 6"></div>
+            </div>
+            
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <div class="text-center mt-4 mb-5" data-aos="fade-up">
+            <a href="about.html" class="btn-outline-pink">Back to Biography</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200, once: true });
+
+        var swiper = new Swiper(".myActivitySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            loop: true,
+            speed: 1000,
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 50, // ปรับระยะห่างให้รูปแนวนอนดูชิดกันพอดี
+                depth: 200,  // เพิ่มมิติความลึก
+                modifier: 1,
+                slideShadows: false,
+            },
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+</html>

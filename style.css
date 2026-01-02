@@ -1,0 +1,159 @@
+:root {
+    --main-pink: #ff85a2;
+    --soft-pink: #fff5f7;
+    --text-pink: #ff4d7d;
+}
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.text-pink { color: var(--text-pink); }
+.bg-soft-pink { background-color: var(--soft-pink); }
+.border-pink { border-color: var(--main-pink) !important; }
+
+/* Navbar */
+.navbar { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+.nav-link { font-weight: 500; color: #555 !important; transition: 0.3s; }
+.nav-link:hover, .nav-link.active { color: var(--main-pink) !important; }
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #fff 0%, var(--soft-pink) 100%);
+    padding-top: 100px;
+}
+
+.name-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    margin-bottom: 20px;
+}
+
+.highlight { color: var(--main-pink); }
+.subtitle-pink { color: var(--main-pink); letter-spacing: 3px; font-weight: 700; }
+
+/* Swiper */
+.swiper { width: 100%; height: 500px; border-radius: 40px; box-shadow: 0 20px 40px rgba(255,133,162,0.2); }
+.swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Buttons */
+.btn-pink {
+    padding: 12px 30px;
+    background: var(--main-pink);
+    color: white;
+    border-radius: 50px;
+    display: inline-block;
+    transition: 0.3s;
+    border: none;
+}
+.btn-pink:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255,133,162,0.3); color: white; }
+
+/* Skills Progress */
+.progress { background-color: #eee; border-radius: 20px; height: 10px; }
+.progress-bar { background-color: var(--main-pink); }
+
+/* Music Player UI */
+.music-player {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    z-index: 10000;
+}
+
+.music-info { display: none; font-size: 12px; color: var(--main-pink); }
+.playing .music-info { display: flex; align-items: center; gap: 10px; }
+
+.btn-music { width: 40px; height: 40px; border-radius: 50%; border: none; background: var(--main-pink); color: white; }
+
+.visualizer { display: flex; align-items: flex-end; gap: 3px; height: 15px; }
+.visualizer span { width: 3px; background: var(--main-pink); animation: bounce 0.5s infinite alternate; }
+
+@keyframes bounce { from { height: 3px; } to { height: 15px; } }
+/* Gallery Card Effect */
+.gallery-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 133, 162, 0.2) !important;
+}
+
+.gallery-img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.gallery-card:hover .gallery-img {
+    transform: scale(1.05);
+}
+
+.btn-pink {
+    /* สไตล์เดิมที่ให้ไป */
+    padding: 12px 30px;
+    background: var(--main-pink);
+    color: white;
+    border-radius: 50px;
+    display: inline-block;
+}
+/* Contact Page Styling */
+.icon-box {
+    width: 50px;
+    height: 50px;
+    background: var(--soft-pink);
+    color: var(--main-pink);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.contact-item {
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+.contact-item:hover {
+    transform: translateX(10px);
+    border-color: var(--main-pink);
+    box-shadow: 0 10px 20px rgba(255, 133, 162, 0.1) !important;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 133, 162, 0.25);
+    border-color: var(--main-pink);
+}
+/* เพิ่มเติมสำหรับสไลด์หน้ากิจกรรม */
+.activitySwiper {
+    padding-bottom: 50px !important;
+}
+
+.gallery-img-large {
+    width: 100%;
+    height: 450px; /* ปรับความสูงตามต้องการ */
+    object-fit: cover;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 20px !important;
+    font-weight: bold;
+}
+
+.text-pink {
+    color: var(--main-pink) !important;
+}

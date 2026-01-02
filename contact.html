@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Anyarat Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --pink-accent: #ff85a2;
+            --dark-bg: #0a0a0a;
+            --soft-dark: #161616;
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--dark-bg); 
+            color: #ffffff; 
+            min-height: 100vh;
+        }
+
+        .serif { font-family: 'Playfair Display', serif; }
+        .text-pink { color: var(--pink-accent) !important; }
+
+        /* Navbar */
+        .navbar { background: rgba(10, 10, 10, 0.95) !important; border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important; }
+        .nav-link { color: #fff !important; font-size: 11px; letter-spacing: 0.2em; font-weight: 300; }
+        .nav-link.active { color: var(--pink-accent) !important; font-weight: 600; }
+
+        /* Header Area */
+        .contact-header { margin-bottom: 80px; }
+        .line-accent { width: 40px; height: 1px; background: var(--pink-accent); margin: 20px auto; }
+
+        /* Contact Items */
+        .contact-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 0px; /* ทรงเหลี่ยมจะดู Fashion กว่าทรงมน */
+            padding: 25px !important;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            text-decoration: none !important;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: var(--pink-accent);
+            transform: translateY(-5px);
+        }
+
+        .icon-box {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 133, 162, 0.1);
+            color: var(--pink-accent);
+            font-size: 1.2rem;
+            margin-right: 20px;
+            transition: 0.4s;
+        }
+
+        .contact-item:hover .icon-box {
+            background: var(--pink-accent);
+            color: #000;
+        }
+
+        .contact-label {
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 4px;
+        }
+
+        .contact-value {
+            font-size: 14px;
+            font-weight: 300;
+            color: #fff;
+            letter-spacing: 0.05em;
+        }
+
+        /* Footer Link */
+        .back-home {
+            font-size: 11px;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.4);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .back-home:hover { color: var(--pink-accent); }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold serif text-pink" href="index.html" style="font-size: 14px; letter-spacing: 0.3em;">ANYARAT.PORT</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="index.html">HOME</a>
+                <a class="nav-link" href="about.html">ABOUT ME</a>
+                <a class="nav-link" href="activities.html">ACTIVITIES</a>
+                <a class="nav-link active" href="contact.html">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5 mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                
+                <div class="contact-header text-center" data-aos="fade-up">
+                    <h6 class="text-pink tracking-widest mb-3 small fw-bold uppercase">Get In Touch</h6>
+                    <h1 class="serif italic display-4">Contact Me</h1>
+                    <div class="line-accent"></div>
+                    <p class="small opacity-50 tracking-wide mt-4">Available for collaborations and creative projects.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <a href="mailto:s6702041610011@email.kmutnb.ac.th" class="contact-item mb-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <p class="contact-label mb-0">Email</p>
+                            <p class="contact-value mb-0">s6702041610011@email.kmutnb.ac.th</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.facebook.com/anyarat.kookkai" target="_blank" class="contact-item mb-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-box"><i class="fa-brands fa-facebook-f"></i></div>
+                        <div>
+                            <p class="contact-label mb-0">Facebook</p>
+                            <p class="contact-value mb-0">Anyarat Sawangchaeng</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.instagram.com/this4nya_rat/?hl=en" target="_blank" class="contact-item mb-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon-box"><i class="fa-brands fa-instagram"></i></div>
+                        <div>
+                            <p class="contact-label mb-0">Instagram</p>
+                            <p class="contact-value mb-0">@this4nya_rat</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="text-center mt-5 pt-4" data-aos="fade-in" data-aos-delay="500">
+                    <a href="index.html" class="back-home">
+                        <i class="fa-solid fa-arrow-left me-2"></i> Back to Main
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ 
+            duration: 1200, 
+            once: true 
+        });
+    </script>
+</body>
+</html>
